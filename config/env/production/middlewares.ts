@@ -6,14 +6,12 @@ export default [
   "strapi::logger",
   "strapi::query",
   "strapi::body",
-  "strapi::session",
   "strapi::favicon",
   "strapi::public",
   {
-    config: {
-      contentSecurityPolicy: {
-        useDefaults: true,
-      },
+    settings: {
+      session: { enabled: true },
     },
   },
+  "strapi::session",
 ]
