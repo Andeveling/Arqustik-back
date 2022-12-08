@@ -9,4 +9,11 @@ export default [
   "strapi::session",
   "strapi::favicon",
   "strapi::public",
+  {
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+      },
+    },
+  },
 ]
