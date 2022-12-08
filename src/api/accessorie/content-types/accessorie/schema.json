@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accessories",
+  "info": {
+    "singularName": "accessorie",
+    "pluralName": "accessories",
+    "displayName": "Accessorie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "id_provider": {
+      "type": "string",
+      "required": true
+    },
+    "systems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::system-pvc.system-pvc",
+      "inversedBy": "accessories"
+    },
+    "arqustik_title": {
+      "type": "string"
+    }
+  }
+}

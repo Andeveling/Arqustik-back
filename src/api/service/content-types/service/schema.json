@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "systems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::system-pvc.system-pvc",
+      "inversedBy": "services"
+    },
+    "material": {
+      "type": "decimal"
+    }
+  }
+}

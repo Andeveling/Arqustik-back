@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "windows",
+  "info": {
+    "singularName": "window",
+    "pluralName": "windows",
+    "displayName": "Window",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "width": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "cost": {
+      "type": "decimal"
+    },
+    "profit": {
+      "type": "decimal"
+    },
+    "quotation": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::quotation.quotation",
+      "inversedBy": "windows"
+    },
+    "cant": {
+      "type": "integer"
+    },
+    "model": {
+      "type": "string"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "blanco"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "default": "Ventana Europea Bella Slide"
+    }
+  }
+}

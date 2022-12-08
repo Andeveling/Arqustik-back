@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "superficies",
+  "info": {
+    "singularName": "superficie",
+    "pluralName": "superficies",
+    "displayName": "Glass",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "caliber": {
+      "type": "integer",
+      "required": true
+    },
+    "systems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::system-pvc.system-pvc",
+      "mappedBy": "glasses"
+    },
+    "id_arqustik": {
+      "type": "string"
+    }
+  }
+}

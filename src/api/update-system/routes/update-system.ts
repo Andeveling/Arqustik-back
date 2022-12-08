@@ -1,0 +1,7 @@
+/**
+ * update-system router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::update-system.update-system');

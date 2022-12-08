@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotations",
+  "info": {
+    "singularName": "quotation",
+    "pluralName": "quotations",
+    "displayName": "Quotation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "arqustik_id": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "project": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "installation": {
+      "type": "boolean",
+      "default": false
+    },
+    "polyurethane": {
+      "type": "boolean",
+      "default": false
+    },
+    "silicone": {
+      "type": "enumeration",
+      "enum": [
+        "zero",
+        "one",
+        "two"
+      ],
+      "default": "zero",
+      "required": true
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "quotations"
+    },
+    "windows": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::window.window",
+      "mappedBy": "quotation"
+    },
+    "transport_mount": {
+      "type": "integer",
+      "default": 0
+    },
+    "transport": {
+      "type": "boolean",
+      "default": false
+    },
+    "protection": {
+      "type": "enumeration",
+      "enum": [
+        "zero",
+        "one",
+        "two"
+      ]
+    }
+  }
+}

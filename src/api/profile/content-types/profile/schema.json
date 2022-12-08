@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "Profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "id_provider": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Marco",
+        "Hoja",
+        "Traslape",
+        "Divisor T",
+        "Pisavidrio",
+        "Refuerzo",
+        "Accesorio"
+      ]
+    },
+    "title_list": {
+      "type": "string"
+    },
+    "system": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::system-pvc.system-pvc",
+      "inversedBy": "profiles"
+    }
+  }
+}

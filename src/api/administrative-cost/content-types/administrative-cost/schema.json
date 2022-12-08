@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "administrative_costs",
+  "info": {
+    "singularName": "administrative-cost",
+    "pluralName": "administrative-costs",
+    "displayName": "AdministrativeCost",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "value": {
+      "type": "decimal"
+    },
+    "systems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::system-pvc.system-pvc",
+      "inversedBy": "administrative_costs"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "system_pvcs",
+  "info": {
+    "singularName": "system-pvc",
+    "pluralName": "system-pvcs",
+    "displayName": "System",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "profiles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::profile.profile",
+      "mappedBy": "system"
+    },
+    "glasses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::superficie.superficie",
+      "inversedBy": "systems"
+    },
+    "accessories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessorie.accessorie",
+      "mappedBy": "systems"
+    },
+    "update": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "administrative_costs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::administrative-cost.administrative-cost",
+      "mappedBy": "systems"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service",
+      "mappedBy": "systems"
+    }
+  }
+}

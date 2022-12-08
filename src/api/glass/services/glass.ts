@@ -1,0 +1,5 @@
+/**
+ * glass service
+ */
+
+export default () => ({});
