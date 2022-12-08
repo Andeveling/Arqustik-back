@@ -8,10 +8,5 @@ export default [
   "strapi::body",
   "strapi::favicon",
   "strapi::public",
-  {
-    settings: {
-      session: { enabled: true },
-    },
-  },
   "strapi::session",
 ]
