@@ -54,6 +54,14 @@
     "description": {
       "type": "string",
       "default": "Ventana Europea Bella Slide"
+    },
+    "dismount": {
+      "type": "boolean",
+      "default": false
+    },
+    "glass": {
+      "type": "string",
+      "required": true
     }
   }
 }
