@@ -16,7 +16,7 @@
       "type": "string"
     },
     "price": {
-      "type": "decimal"
+      "type": "float"
     },
     "systems": {
       "type": "relation",
@@ -25,7 +25,13 @@
       "inversedBy": "services"
     },
     "material": {
-      "type": "decimal"
+      "type": "float"
+    },
+    "description": {
+      "type": "string"
+    },
+    "UOM": {
+      "type": "string"
     }
   }
 }
