@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "window_models",
+  "info": {
+    "singularName": "window-model",
+    "pluralName": "window-models",
+    "displayName": "windowModel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "sliding",
+        "swing",
+        "fixed"
+      ]
+    },
+    "opening": {
+      "type": "string"
+    },
+    "systems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::system-pvc.system-pvc",
+      "inversedBy": "window_models"
+    },
+    "windowdoor": {
+      "type": "enumeration",
+      "enum": [
+        "window",
+        "door"
+      ]
+    },
+    "minW": {
+      "type": "integer"
+    },
+    "maxW": {
+      "type": "integer"
+    },
+    "minH": {
+      "type": "integer"
+    },
+    "maxH": {
+      "type": "integer"
+    },
+    "model3D": {
+      "type": "string"
+    }
+  }
+}
