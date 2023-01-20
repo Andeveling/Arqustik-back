@@ -16,7 +16,8 @@
       "type": "string"
     },
     "location": {
-      "type": "string"
+      "type": "string",
+      "default": "No asignada"
     },
     "width": {
       "type": "integer"
