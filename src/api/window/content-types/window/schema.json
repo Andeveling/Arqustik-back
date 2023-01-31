@@ -63,6 +63,19 @@
     "glass": {
       "type": "string",
       "required": true
+    },
+    "system": {
+      "type": "enumeration",
+      "enum": [
+        "bella-sliding"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "door",
+        "window"
+      ]
     }
   }
 }
