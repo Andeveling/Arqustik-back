@@ -50,6 +50,12 @@
     },
     "model3D": {
       "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "hours": {
+      "type": "decimal"
     }
   }
 }
