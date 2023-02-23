@@ -63,6 +63,20 @@
     "glass": {
       "type": "string",
       "required": true
+    },
+    "system": {
+      "type": "enumeration",
+      "enum": [
+        "bella-sliding",
+        "everestmax"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "door",
+        "window"
+      ]
     }
   }
 }

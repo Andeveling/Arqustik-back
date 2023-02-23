@@ -22,7 +22,8 @@
     },
     "id_provider": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "systems": {
       "type": "relation",
