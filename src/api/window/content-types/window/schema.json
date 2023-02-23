@@ -67,7 +67,8 @@
     "system": {
       "type": "enumeration",
       "enum": [
-        "bella-sliding"
+        "bella-sliding",
+        "everestmax"
       ]
     },
     "type": {
